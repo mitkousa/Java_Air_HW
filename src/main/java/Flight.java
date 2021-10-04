@@ -20,14 +20,17 @@ public class Flight {
     }
 
     public Pilot getPilot() {
+
         return pilot;
     }
 
     public void setPilot(Pilot pilot) {
+
         this.pilot = pilot;
     }
 
     public ArrayList<CabinCrewMember> getCabinCrewMembers() {
+
         return cabinCrewMembers;
     }
 
@@ -36,50 +39,77 @@ public class Flight {
     }
 
     public ArrayList<Passenger> getPassengers() {
+
         return passengers;
     }
 
+    public void addPassenger(Passenger passenger){
+        this.passengers.add(passenger);
+    }
+
     public void setPassengers(ArrayList<Passenger> passengers) {
+
         this.passengers = passengers;
     }
 
     public Plane getPlane() {
+
         return plane;
     }
 
     public void setPlane(Plane plane) {
+
         this.plane = plane;
     }
 
     public String getFlightNumber() {
+
         return flightNumber;
     }
 
     public void setFlightNumber(String flightNumber) {
+
         this.flightNumber = flightNumber;
     }
 
     public String getDestination() {
+
         return destination;
     }
 
     public void setDestination(String destination) {
+
         this.destination = destination;
     }
 
     public String getDepartureAirport() {
+
         return departureAirport;
     }
 
     public void setDepartureAirport(String departureAirport) {
+
         this.departureAirport = departureAirport;
     }
 
     public String getDepartureTime() {
+
         return departureTime;
     }
 
     public void setDepartureTime(String departureTime) {
+
         this.departureTime = departureTime;
+    }
+
+    public int availableSeats(){
+        int totalSeats = 80;
+        return totalSeats - this.passengers.size();
+    }
+
+    public void bookPassenger(Passenger passenger){
+        if(availableSeats() > 0){
+            addPassenger(passenger);
+        }
     }
 }

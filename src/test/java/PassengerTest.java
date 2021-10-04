@@ -22,9 +22,4 @@ public class PassengerTest {
     public void passengerHasNumberOfBags(){
         assertEquals(2, passenger.getNumberOfBags());
     }
-
-    @Test
-    public void CabinCrewCanRelayMessage(){
-        assertEquals("Emma can relay message", cabinCrewMember.relayMessage());
-    }
 }
