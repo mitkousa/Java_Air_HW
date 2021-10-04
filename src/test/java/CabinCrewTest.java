@@ -3,28 +3,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class PassengerTest {
-    Passenger passenger;
+public class CabinCrewTest {
     CabinCrewMember cabinCrewMember;
+    Passenger passenger;
 
     @Before
     public void before(){
         passenger = new Passenger("James", 2);
-//        cabinCrewMember = CabinCrewMember.valueOf("Emma");
-    }
-
-    @Test
-    public void passengerHasName(){
-        assertEquals("James", passenger.getName());
-    }
-
-    @Test
-    public void passengerHasNumberOfBags(){
-        assertEquals(2, passenger.getNumberOfBags());
     }
 
     @Test
     public void CabinCrewCanRelayMessage(){
+        cabinCrewMember = new CabinCrewMember(Rank.FLIGHT_ATTENDANT1);
         assertEquals("Emma can relay message", cabinCrewMember.relayMessage());
     }
 }

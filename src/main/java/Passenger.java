@@ -8,12 +8,12 @@ public class Passenger {
         this.numberOfBags = numberOfBags;
     }
 
-    public void setNumberOfBags(int numberOfBags) {
-        this.numberOfBags = numberOfBags;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setNumberOfBags(int numberOfBags) {
+        this.numberOfBags = numberOfBags;
     }
 
     public void setName(String name) {
